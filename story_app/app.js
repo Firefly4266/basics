@@ -1,6 +1,12 @@
 'use strict';
-var noun = prompt('please enter a noun.');
-var verb = prompt('please enter a verb');
-var adjective = prompt('Please enter an adjective.');
+var numOfQuestions = 3;
+var questionsLeft = '[' + numOfQuestions + ' questions left]';
+var noun = prompt('please enter a noun. ' + questionsLeft);
+numOfQuestions -= 1;
+questionsLeft = '[' + numOfQuestions + ' questions left]';
+var verb = prompt('please enter a verb. ' + questionsLeft);
+numOfQuestions -= 1;
+questionsLeft = '[' + numOfQuestions + ' questions left]';
+var adjective = prompt('Please enter an adjective. ' + questionsLeft);
 var story = '<h2>There was a ' + noun + ' who ' + verb + ' very ' + adjective + ' until the cows came home.</h2>';
 document.write(story);
